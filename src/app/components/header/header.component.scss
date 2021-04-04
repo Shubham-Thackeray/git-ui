@@ -1,0 +1,75 @@
+.outer-container {
+  display: flex;
+  align-items: center;
+  background: #24292e;
+  padding: 11px 16px;
+  width: 100%;
+  > a {
+    width: 32px;
+    height: 32px;
+  }
+  .theme {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.github-logo {
+  fill: #fff;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.git-search {
+  padding-left: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  input {
+    background: rgba(255, 255, 255, 0.13);
+    color: #fff;
+    outline: 0;
+    border-radius: 6px;
+    padding: 7px 12px;
+    width: 200px;
+    font: 14px Arial !important;
+    transition: width 0.2s ease-out, color 0.2s ease-out;
+  }
+
+  @media (min-width: 425px) {
+    input {
+      width: 318px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &:focus {
+      width: 50%;
+      transition: width 0.2s ease-out, color 0.2s ease-out;
+    }
+  }
+}
+
+.searchIco {
+  fill: #fff;
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  margin-left: -32px;
+
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.fc {
+  width: fit-content;
+}
