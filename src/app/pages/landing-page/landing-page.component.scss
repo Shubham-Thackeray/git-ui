@@ -5,6 +5,12 @@
     padding: var(--verticalPadding) var(--horizontalPadding);
   
 }
+.desk-screen{
+  @media (max-width: 768px) {
+  display: none;
+
+  }
+}
 .tab{
     --border: #e1e4e8;
     --ticker: rgba(209,213,218,.5);
@@ -25,16 +31,26 @@
       border-bottom: 2px solid transparent;
   
       padding: 14px 16px;
-  
-      &:hover {
-        border-bottom: 2px solid var(--border);
+      @media (max-width: 768px) {
+        font-size: 10px;
+        padding:0 12px;
+
       }
+      // :hover {
+      //   border-bottom: 2px solid var(--border);
+      // }
   
       .label {
         font-size: 14px;
         padding: 0 7px;
         font-weight: 600;
+        @media (max-width: 768px) {
+          font-size: 12px;
+          padding: 0 2px;
+
+        }
       }
+     
       .number {
         background: var(--ticker);
   
@@ -53,9 +69,9 @@
     .active {
       border-bottom: 2px solid var(--orange);
   
-      &:hover {
-        border-bottom: 2px solid var(--orange);
-      }
+      // :hover {
+      //   border-bottom: 2px solid var(--orange);
+      // }
     }
   
     .line {
@@ -63,33 +79,16 @@
       width: 200vw;
       border-bottom: 1px solid var(--border);
       margin-left: -50vw;
-    }
-  
-    &.mobile {
-      margin-top: var(--verticalPadding);
-      overflow-x: auto;
-  
-      ::-webkit-scrollbar-thumb {
-        background: var(--gray-light);
-      }
-      ::-webkit-scrollbar {
-        height: 5px !important;
-        width: 5px !important;
-      }
-  
-      .content {
-        margin: 0 auto;
-        cursor: pointer;
-      }
-  
-      @media (min-width: 768px) {
-        display: none;
+      margin-top: -2px;
+      @media (max-width: 768px) {
+     display: none;
       }
     }
-    &.desktop {
-      display: none;
   
-      @media (min-width: 768px) {
+
+    .desktop {
+    
+      
         display: unset;
   
         .wrapper {
@@ -97,13 +96,14 @@
           justify-content: space-between;
           margin: 0 auto;
           max-width: 1280px;
+          display: inline-flex !important;
         }
   
         .offset {
           width: 25%;
           margin-right: var(--horizontalPadding);
         }
-      }
+      
     }
 }
 .repos{

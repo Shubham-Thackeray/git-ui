@@ -52,7 +52,7 @@
 }
 
 .avatar{
-    width: 16%;
+    width: 16vh;
     border-radius: 50%;
     cursor: pointer;
   
@@ -102,6 +102,9 @@
         margin-right: 5px;
       }
     }
+    @media (max-width: 768px) {
+      display: none;
+    }
 }
 
 .custom-ul1{
@@ -132,6 +135,12 @@
         color: '#33A1F2' !important;
         transition: filter 0.6s ease-in-out !important;
       }
+    }
+    @media (max-width: 768px) {
+      li {
+        display: none;
+      }
+
     }
 }
 .organisations{

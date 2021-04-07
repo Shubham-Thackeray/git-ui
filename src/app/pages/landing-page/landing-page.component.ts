@@ -52,4 +52,8 @@ export class LandingPageComponent implements OnInit {
 
     return value.toFixed(1)+' k';
   }
+  setActive(value:number):number{
+    this.panelActive = value;
+    return this.panelActive; 
+  }
 }
